@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Travel Destinations Manager</h1>
+            <p>Manage your dream travel destinations</p>
+        </header>
+
+        <main>
+            <!-- Form for adding/editing destinations -->
+            <section class="form-section">
+                <h2 id="form-title">Add New Destination</h2>
+                <form id="destination-form">
+                    <input type="hidden" id="destination-id">
+                    <div class="form-group">
+                        <label for="name">Destination Name:</label>
+                        <input type="text" id="name" required placeholder="Enter destination name">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" required placeholder="Enter country/city">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" rows="4" placeholder="Describe your destination"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Visit Date:</label>
+                        <input type="date" id="date">
+                    </div>
+                    <button type="submit" id="submit-btn">Add Destination</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </form>
+            </section>
+
+            <!-- Display destinations -->
+            <section class="destinations-section">
+                <h2>Your Travel Destinations</h2>
+                <div id="destinations-container">
+                    <!-- Destinations will be displayed here dynamically -->
+                    <p id="no-destinations-message">No destinations added yet. Start by adding your first destination!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
